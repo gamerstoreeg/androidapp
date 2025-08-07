@@ -2,7 +2,7 @@ import groovy.json.JsonSlurper
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-//[enabled by builder] apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
 //[enabled by builder] apply plugin: 'com.google.firebase.crashlytics'
 
 ext {
@@ -179,6 +179,8 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'com.google.android.gms:play-services-location:21.3.0'
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
+    implementation 'com.google.firebase:firebase-messaging'
     /**** end google ****/
 
     /**** local dependencies ****/
